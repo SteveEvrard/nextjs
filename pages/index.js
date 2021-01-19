@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { TextStyle } from '@shopify/polaris';
+import { Layout, Page, TextStyle } from '@shopify/polaris';
 
 export default function Home() {
   return (
@@ -11,12 +11,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Steve's app!</a>
-        </h1>
-        <TextStyle variation="positive">
-          Sample app using React and Next.js
-        </TextStyle>
+        <Page>
+          <Layout>
+          <h1 className={styles.title}>
+            Welcome to <a href="https://nextjs.org">Steve's app!</a>
+          </h1>
+          <TextStyle variation="positive">
+            Sample app using React and Next.js
+          </TextStyle>
+          </Layout>
+        </Page>
       </main>
 
       <footer className={styles.footer}>
